@@ -30,7 +30,11 @@
       </div>
     </header>
     <main class="container content">
+
+      <%for(post of posts){ %>
+        
       <div class="card">
+      
         <div class="card-header">
           <div>
             <img class="avatar" src="/img/avatar-example.png">
@@ -50,9 +54,9 @@
             <b>Postado no dia: 16/04/2020</b>
           </div>
           <div class="card-comments">
-            <p><b>ovinnyoliveira</b> Mano que incrivel</p>
-            <p><b>front.hendy</b></p>
-            <p><b>verofefo</b> aff.. </p>
+            <%for(comentario of post.comentarios) { %>
+              <p><b>ovinnyoliveira</b> Mano que incrivel</p>
+            <% } %>
           </div>
          
         </div>
@@ -61,8 +65,9 @@
           <button>Publicar</button>
         </form>
       </div>
+      <% } %>
       
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-header">
           <div>
             <img class="avatar" src="/img/avatar-example.png">
@@ -92,7 +97,7 @@
           <input type="text" placeholder="Adicione um comentário...">
           <button>Publicar</button>
         </form>
-      </div>
+      </div> -->
     </main>
   </body>
 </html>
